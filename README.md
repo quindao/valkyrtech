@@ -1,2 +1,2 @@
 # valcore
-core mode for valkytech modpack
+core mod for valkytech modpack
