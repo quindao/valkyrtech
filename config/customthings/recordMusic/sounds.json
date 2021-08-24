@@ -1,0 +1,11 @@
+{
+  "records.customthings.reality": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "records/reality",
+        "stream": true
+      }
+    ]
+  }
+}
