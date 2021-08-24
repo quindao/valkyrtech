@@ -36,6 +36,8 @@ servers.dat
 settings.rtg
 usercache.json
 usernamecache.json
+resourcepacks/
+dumps/
 # Ignore Gradle GUI config
 gradle-app.setting
 

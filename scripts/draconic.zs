@@ -17,6 +17,7 @@
         mods.witchinggadgets.InfernalBlastfurnace.removeRecipe(<DraconicEvolution:draconiumIngot>);
         mods.immersiveengineering.ArcFurnace.removeRecipe(<DraconicEvolution:draconiumIngot>);
         mods.extraUtils.QED.removeRecipe(<DraconicEvolution:draconiumIngot>);
+
         #tcon
             mods.tconstruct.Smeltery.removeMelting(<DraconicEvolution:draconiumIngot>);
             mods.tconstruct.Smeltery.removeMelting(<DraconicEvolution:draconiumOre>);
@@ -77,8 +78,24 @@
         [<ore:ingotDraconiumAwakened>, <minecraft:ender_eye>, <ore:ingotDraconiumAwakened>], [<ThermalFoundation:material:512>, <ore:ingotDraconiumAwakened>, <ThermalFoundation:material:512>]]);
         recipes.addShapeless(<DraconicEvolution:draconiumIngot> * 8, [<ore:dustDraconium>, <ore:dustDraconium>, <ore:dustDraconium>, <ore:dustDraconium>, <ore:itemNetherStar>, <ore:dustDraconium>, <ore:dustDraconium>, <ore:dustDraconium>, <ore:dustDraconium>]);
 
-    #Sleeping heart
+    #Sleeping_heart
         mods.thermalexpansion.Smelter.addRecipe(16000, <Thaumcraft:ItemCrystalEssence>.withTag({Aspects: [{amount: 1, key: "auram"}]}) * 16, <minecraft:dragon_egg>, <customthings:item:3>, <minecraft:dragon_egg>, 100);
 
-    #awakend heart
-        mods.thaumcraft.Research.addResearch(DEHEART, TT_CATEGORY, , 12, 8, )
+    #dragon_heart
+
+        #adding research
+            mods.thaumcraft.Research.addResearch("HEARTACHE", "TT_CATEGORY", "terminus 64, auram 32, permutatio 16, potentia 8", 13, 8, 8, <DraconicEvolution:dragonHeart>);
+            game.setLocalization("en_US", "tc.research_name.HEARTACHE", "Restarting the beat");
+            game.setLocalization("en_US", "tc.research_text.HEARTACHE", "one hell of a task");
+            mods.thaumcraft.Research.setSpikey("HEARTACHE", true);
+            mods.thaumcraft.Research.setConcealed("HEARTACHE", true);
+
+        #adding the page
+            mods.thaumcraft.Research.addPage("HEARTACHE", "derp.research_page.HEARTACHE");
+            game.setLocalization("en_US", "derp.research_page.HEARTACHE", "This was once the beating heart of a ferocus dragon but it slumbers now. fortunaly for you This can be Reversed through an anchent and arcane ritual");
+
+        #parenthood
+            mods.thaumcraft.Research.addPrereq("HEARTACHE", "ICHOR", false);
+
+        #dragon_heart_activation
+            mods.thaumcraft.Infusion.addRecipe("HEARTACHE", <customthings:item:3>, [<ThaumicTinkerer:kamiResource>, <ThaumicTinkerer:kamiResource>, <ThaumicTinkerer:kamiResource>, <ThaumicTinkerer:kamiResource>, <ThaumicTinkerer:kamiResource>, <ThaumicTinkerer:kamiResource>, <ThaumicTinkerer:kamiResource>, <ThaumicTinkerer:kamiResource>, <Avaritia:Resource:8>, <Avaritia:Resource:8>, <Avaritia:Endest_Pearl>, <Avaritia:Endest_Pearl>, <ThermalFoundation:material:76>, <ThermalFoundation:material:76>, <ThermalFoundation:material:76>, <ThermalFoundation:material:76>], "terminus 64, auram 32, permutatio 16, potentia 8", <DraconicEvolution:dragonHeart>, 6);

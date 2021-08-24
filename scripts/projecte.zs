@@ -23,6 +23,7 @@
     val wardstone = <Thaumcraft:blockCosmeticSolid:3>;
     val steelblock = <ImmersiveEngineering:storage:7>;
     val dracoblock = <DraconicEvolution:draconium>;
+
 #removals
     
     #red matter block
@@ -45,12 +46,21 @@
 
     #alchemical chest
         recipes.remove(<ProjectE:alchemical_chest>);
+    
+    #energy condensor mk.1
+        recipes.remove(<ProjectE:condenser_mk1>);
+
+    #energy condensor mk.2
+        recipes.remove(<ProjectE:condenser_mk2>);
+
+    #philosophers_stone
+        recipes.remove(<ProjectE:item.pe_philosophers_stone>.withTag({}));
 
 #addtions
 
     #dark matter block
-        recipes.addShaped(<ProjectE:matter_block>,
-        [[<ProjectE:item.pe_matter>, <ProjectE:item.pe_matter>, null],
+        recipes.addShaped(<ProjectE:matter_block>,[
+        [<ProjectE:item.pe_matter>, <ProjectE:item.pe_matter>, null],
         [<ProjectE:item.pe_matter>, <ProjectE:item.pe_matter>, null],
         [null, null, null]]);
 
@@ -110,12 +120,42 @@
 
     #alchemical chest
           mods.avaritia.ExtremeCrafting.addShaped(<ProjectE:alchemical_chest>,[
-              [voidingot, voidingot, voidingot, diamond, diamond, diamond, ichoringot, ichoringot, ichoringot],
-              [voidingot, lcd, voidingot, diamond, mcd, diamond, ichoringot, hcd, ichoringot],
-              [voidingot, voidingot, voidingot, diamond, diamond, diamond, ichoringot, ichoringot, ichoringot],
-              [wardstone, wardstone, wardstone, atfuel, atfuel, atfuel, wardstone, wardstone, wardstone, ],
-              [wardstone, wardstone, wardstone, atfuel, <IronChest:BlockIronChest:6>, atfuel, wardstone, wardstone, wardstone, ],
-              [wardstone, wardstone, wardstone, atfuel, atfuel, atfuel, wardstone, wardstone, wardstone, ],
-              [steelblock, steelblock, steelblock, dracoblock, dracoblock, dracoblock, steelblock, steelblock, steelblock, ],
-              [steelblock, steelblock, steelblock, dracoblock, dracoblock, dracoblock, steelblock, steelblock, steelblock, ],
-              [steelblock, steelblock, steelblock, dracoblock, dracoblock, dracoblock, steelblock, steelblock, steelblock, ]]);
+        [voidingot, voidingot, voidingot, diamond, diamond, diamond, ichoringot, ichoringot, ichoringot],
+        [voidingot, lcd, voidingot, diamond, mcd, diamond, ichoringot, hcd, ichoringot],
+        [voidingot, voidingot, voidingot, diamond, diamond, diamond, ichoringot, ichoringot, ichoringot],
+        [wardstone, wardstone, wardstone, atfuel, atfuel, atfuel, wardstone, wardstone, wardstone, ],
+        [wardstone, wardstone, wardstone, atfuel, <IronChest:BlockIronChest:6>, atfuel, wardstone, wardstone, wardstone, ],
+        [wardstone, wardstone, wardstone, atfuel, atfuel, atfuel, wardstone, wardstone, wardstone, ],
+        [steelblock, steelblock, steelblock, dracoblock, dracoblock, dracoblock, steelblock, steelblock, steelblock, ],
+        [steelblock, steelblock, steelblock, dracoblock, dracoblock, dracoblock, steelblock, steelblock, steelblock, ],
+        [steelblock, steelblock, steelblock, dracoblock, dracoblock, dracoblock, steelblock, steelblock, steelblock, ]]);
+
+    #energy condenser mk1
+        mods.avaritia.ExtremeCrafting.addShaped(<ProjectE:condenser_mk1>,[
+        [deobsid, deobsid, deobsid, <rftools:infusedDiamondItem>, <BloodArsenal:blood_diamond>, <rftools:infusedDiamondItem>, deobsid, deobsid, deobsid],
+        [deobsid, deobsid, deobsid, rmatter, <MorePlanet:pluto_item>, rmatter, deobsid, deobsid, deobsid],
+        [deobsid, deobsid, deobsid, <Thaumcraft:ItemResource:2>, <RotaryCraft:rotarycraft_item_compacts:12>, <Thaumcraft:ItemResource:2>, deobsid, deobsid, deobsid],
+        [<rftools:infusedDiamondItem>, rmatter, <Thaumcraft:ItemResource:2>, <Botania:manaResource:7>, <BigReactors:BRIngot:8>, <Botania:manaResource:7>, <Thaumcraft:ItemResource:2>, rmatter, <rftools:infusedDiamondItem>],
+        [<BloodArsenal:blood_diamond>, <MorePlanet:pluto_item>, <RotaryCraft:rotarycraft_item_compacts:12>, <BigReactors:BRIngot:8>, <ProjectE:alchemical_chest>, <BigReactors:BRIngot:8>, <RotaryCraft:rotarycraft_item_compacts:12>, <MorePlanet:pluto_item>, <BloodArsenal:blood_diamond>],
+        [<rftools:infusedDiamondItem>, rmatter, <Thaumcraft:ItemResource:2>, <Botania:manaResource:7>, <BigReactors:BRIngot:8>, <Botania:manaResource:7>, <Thaumcraft:ItemResource:2>, rmatter, <rftools:infusedDiamondItem>],
+        [deobsid, deobsid, deobsid, <Thaumcraft:ItemResource:2>, <RotaryCraft:rotarycraft_item_compacts:12>, <Thaumcraft:ItemResource:2>, deobsid, deobsid, deobsid],
+        [deobsid, deobsid, deobsid, rmatter, <MorePlanet:pluto_item>, rmatter, deobsid, deobsid, deobsid],
+        [deobsid, deobsid, deobsid, <rftools:infusedDiamondItem>, <BloodArsenal:blood_diamond>, <rftools:infusedDiamondItem>, deobsid, deobsid, deobsid]]);
+
+    #energy condenser mk.2
+        mods.avaritia.ExtremeCrafting.addShaped(<ProjectE:condenser_mk2>,[
+        [rmatterblock, rmatterblock, rmatterblock, dmatterblock, dmatterblock, dmatterblock, rmatterblock, rmatterblock, rmatterblock],
+        [rmatterblock, rmatterblock, rmatterblock, <Avaritia:Singularity:10>, <AWWayofTime:blockCrystal>, <Avaritia:Singularity:10>, rmatterblock, rmatterblock, rmatterblock],
+        [rmatterblock, rmatterblock, rmatterblock, <Thaumcraft:ItemResource:16>, <Avaritia:Resource:5>, <Thaumcraft:ItemResource:16>, rmatterblock, rmatterblock, rmatterblock],
+        [dmatterblock, <Avaritia:Singularity:10>, <Thaumcraft:ItemResource:16>, <Botania:manaResource:14>, <RotaryCraft:rotarycraft_item_compacts:3>, <Botania:manaResource:14>, <Thaumcraft:ItemResource:16>, <Avaritia:Singularity:10>, dmatterblock],
+        [dmatterblock, <AWWayofTime:blockCrystal>, <Avaritia:Resource:5>, <RotaryCraft:rotarycraft_item_compacts:3>, <ProjectE:condenser_mk1>, <RotaryCraft:rotarycraft_item_compacts:3>, <Avaritia:Resource:5>, <AWWayofTime:blockCrystal>, dmatterblock],
+        [dmatterblock, <Avaritia:Singularity:10>, <Thaumcraft:ItemResource:16>, <Botania:manaResource:14>, <RotaryCraft:rotarycraft_item_compacts:3>, <Botania:manaResource:14>, <Thaumcraft:ItemResource:16>, <Avaritia:Singularity:10>, dmatterblock],
+        [rmatterblock, rmatterblock, rmatterblock, <Thaumcraft:ItemResource:16>, <Avaritia:Resource:5>, <Thaumcraft:ItemResource:16>, rmatterblock, rmatterblock, rmatterblock],
+        [rmatterblock, rmatterblock, rmatterblock, <Avaritia:Singularity:10>, <AWWayofTime:blockCrystal>, <Avaritia:Singularity:10>, rmatterblock, rmatterblock, rmatterblock],
+        [rmatterblock, rmatterblock, rmatterblock, dmatterblock, dmatterblock, dmatterblock, rmatterblock, rmatterblock, rmatterblock]]);
+
+    #philosophers stone
+         recipes.addShaped(<ProjectE:item.pe_philosophers_stone>.withTag({}),[
+        [<Thaumcraft:ItemResource:14>, <DraconicEvolution:draconiumDust>, <Thaumcraft:ItemResource:14>],
+        [<DraconicEvolution:draconiumDust>, <minecraft:nether_star>, <DraconicEvolution:draconiumDust>],
+        [<Thaumcraft:ItemResource:14>, <DraconicEvolution:draconiumDust>, <Thaumcraft:ItemResource:14>]]);

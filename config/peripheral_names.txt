@@ -5,6 +5,7 @@ Reika.ChromatiCraft.TileEntity.Storage.TileEntityCrystalTank	ccchroma_tank
 Reika.ReactorCraft.TileEntities.Fission.TileEntityFuelRod	fuel_core
 Reika.ReactorCraft.TileEntities.Processing.TileEntityTritizer	reactorneutron_irradiation_chamber
 Reika.RotaryCraft.TileEntities.Storage.TileEntityReservoir	rcreservoir
+mekanism.generators.common.tile.reactor.TileEntityReactorLogicAdapter	reactor_logic_adapter
 net.minecraft.block.BlockJukebox$TileEntityJukebox	record_player
 net.minecraft.tileentity.TileEntityBeacon	beacon
 net.minecraft.tileentity.TileEntityBrewingStand	brewing_stand
