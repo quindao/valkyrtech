@@ -1,0 +1,25 @@
+{"data":
+
+	[
+		{
+			"name": "goldvalcoin",
+			"maxStackSize": "64"
+		},
+	
+		{
+			"name": "ironvalcoin",
+			"maxStackSize": "64"
+		},
+
+		{
+			"name": "diamondvalcoin",
+			"maxStackSize": "64"
+		},
+
+		{
+			"name": "sleeping_heart",
+			"maxStackSize": "64"
+		}
+	]
+
+}
