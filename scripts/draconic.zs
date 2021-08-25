@@ -99,4 +99,4 @@
 
         #dragon_heart_activation
             mods.thaumcraft.Infusion.addRecipe("HEARTACHE", <customthings:item:3>, [<ThaumicTinkerer:kamiResource>, <ThaumicTinkerer:kamiResource>, <ThaumicTinkerer:kamiResource>, <ThaumicTinkerer:kamiResource>, <ThaumicTinkerer:kamiResource>, <ThaumicTinkerer:kamiResource>, <ThaumicTinkerer:kamiResource>, <ThaumicTinkerer:kamiResource>, <Avaritia:Resource:8>, <Avaritia:Resource:8>, <Avaritia:Endest_Pearl>, <Avaritia:Endest_Pearl>, <ThermalFoundation:material:76>, <ThermalFoundation:material:76>, <ThermalFoundation:material:76>, <ThermalFoundation:material:76>], "terminus 64, auram 32, permutatio 16, potentia 8", <DraconicEvolution:dragonHeart>, 6);
-            mods.thaumcraft.Research.addInfusionPage("HEARTACHE", <customthings:item:3>);
+            mods.thaumcraft.Research.addInfusionPage("HEARTACHE", <DraconicEvolution:dragonHeart>);
