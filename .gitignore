@@ -21,7 +21,12 @@ logs/
 manifest.json
 minetweaker.log
 modpack/
-mods/
+mods/carpentersblocks/
+mods/ic2/
+mods/OpenSecurity/
+mods/railcraft/
+mods/Reika/
+mods/ChromatiCraft 1.7.10*
 natives/
 null/
 null8017833f-1579-479e-adf4-a42e554e7261.dat
@@ -38,6 +43,7 @@ usercache.json
 usernamecache.json
 resourcepacks/
 dumps/
+
 # Ignore Gradle GUI config
 gradle-app.setting
 
